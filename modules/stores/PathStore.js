@@ -7,6 +7,8 @@ var RefreshLocation = require('../locations/RefreshLocation');
 var CHANGE_EVENT = 'change';
 var _events = new EventEmitter;
 
+_events.setMaxListeners(0);
+
 function notifyChange() {
   _events.emit(CHANGE_EVENT);
 }
